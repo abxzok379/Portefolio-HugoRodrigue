@@ -2,7 +2,8 @@
   <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta author="Nicolas Cuffia - info@nicolascuffia.com" >
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300" rel="stylesheet">
         <script src="script.js"></script>
@@ -12,17 +13,25 @@
 
      <!-- MENU -->
      <div id="menu">
+        <button id="close-btn" onclick="closeMenu()">   <!-- BOUTON CLOSE MENU -->
+           <span class="close-icon">&times;</span>
+        </button>
+        <a href="index.html">ACCUEIL</a>
+        <a href="about.html">À PROPOS</a>
+        <a href="#">CONTACT</a>
+        <a href="#">LOREM UPSUM</a>
+        <a href="#">LOREM EPSUM</a>
      </div>
      <!---->
       <!-- HEADER-->
       <header>
 
             <div id="header-left">  <!-- HEADER-lEFT -->
-               <dib id="nav-btn" onclick="myFunction()"> <!-- BOUTON HEADER LEFT-->
+               <dib id="nav-btn" onclick="openMenu()"> <!-- BOUTON HEADER LEFT-->
                    <div class="btn-line"></div>
                    <div class="btn-line"></div>
                    <div class="btn-line"></div>
-               </dib>
+               </div>
             </div>
             <div id="header-right"> <!-- HEADER-RIGHT -->
             </div>
@@ -38,8 +47,8 @@
            </div>
            <!-- BOX LANGUAGE LINKS -->
            <div id="box-language-links">
-              <a href="#">Compositeur</a>
-              <a href="#">Composer</a>
+              <a href="#">COMPOSITEUR</a>
+              <a href="#">COMPOSER</a>
            </div>
        </div>
          <!-- MAIN-RIGHT -->
