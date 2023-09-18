@@ -10,51 +10,43 @@
         <title>Hugo Rodrigue - Compositeur </title>
     </head>
     <body>
-
-     <!-- MENU -->
      <div id="menu">
-        <button id="close-btn" onclick="closeMenu()">   <!-- BOUTON CLOSE MENU -->
+        <button id="close-btn" onclick="closeMenu()">   
            <span class="close-icon">&times;</span>
         </button>
-        <a href="index.html">ACCUEIL</a>
-        <a href="about.html">À PROPOS</a>
-        <a href="#">CONTACT</a>
-        <a href="#">LOREM UPSUM</a>
-        <a href="#">LOREM EPSUM</a>
+        <a href="#" onclick="nextPage()">ACCUEIL</a>
+        <a href="#" onclick="nextPage()">À PROPOS</a>
+        <a href="#" onclick="nextPage()">CONTACT</a>
+        <a href="#" onclick="nextPage()">LOREM UPSUM</a>
+        <a href="#" onclick="nextPage()">LOREM EPSUM</a>
      </div>
-     <!---->
-      <!-- HEADER-->
       <header>
-
-            <div id="header-left">  <!-- HEADER-lEFT -->
-               <dib id="nav-btn" onclick="openMenu()"> <!-- BOUTON HEADER LEFT-->
+            <div id="header-left">  
+               <dib id="nav-btn" onclick="openMenu()"> 
                    <div class="btn-line"></div>
                    <div class="btn-line"></div>
                    <div class="btn-line"></div>
                </div>
             </div>
-            <div id="header-right"> <!-- HEADER-RIGHT -->
+            <div id="header-right"> 
             </div>
       </header>
-      <!--_MAIN -->
       <main>
-          <!--MAIN-LEFT -->
        <div id="main-left">
-            <!-- BOX-NOM -->
            <div id="box-nom">
-             <p>Hugo<br>
+             <p><span id="h">H</span><span id="u">U</span><span id="g">G</span><span id="o">O</span><br>
              <span>Rodrigue</span></p>
            </div>
-           <!-- BOX LANGUAGE LINKS -->
+          
            <div id="box-language-links">
               <a href="#">COMPOSITEUR</a>
               <a href="#">COMPOSER</a>
            </div>
        </div>
-         <!-- MAIN-RIGHT -->
        <div id="main-right"></div>
-         <!---->
       </main>
-      <!---->
+    <div id="page2" style="display: flex; justify-content: center;"><h1 style="color: black; text-align: center;">Page 2</h1></div>
+
+      </div>
     </body>
   </html>
