@@ -1,3 +1,7 @@
+
+
+
+
 function openMenu() {
     var menu = document.querySelector('#menu');
     menu.classList.remove('close');
@@ -32,3 +36,5 @@ function openMenu() {
 
     })
   })
+
+
