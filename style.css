@@ -1,11 +1,12 @@
 
 body { 
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   margin: 0; 
   padding:0;
   max-width: 100%; 
   height:1000px; 
   cursor: default;
+  transition: 0.5s ease;
 } 
  
 
@@ -30,6 +31,10 @@ header {
 #header-right { 
   width: 100%; 
   height: 10vh; 
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  padding-right:2%;
 } 
  
 #nav-btn { 
@@ -61,13 +66,14 @@ header {
   top: 0; 
   left: -100%; 
   width: 100%; 
-  height: 100%; 
+  min-height:1000px; 
   background-color: #dddada; 
   transition: left 0.3s ease; 
   display: flex; 
   flex-direction: column; 
   color: white; 
   cursor: url(pointer.png), auto; 
+  z-index:8888;
 } 
  
 #menu.show { 
@@ -122,7 +128,6 @@ header {
 main { 
   width: 100%; 
   height: 100%; 
-  background-color: rgba(255, 255, 255, 0.486); 
   display: flex; 
 } 
  
@@ -205,6 +210,7 @@ main {
   color: white; 
   cursor: url(pointer.png), auto; 
   border-right: 2px solid black; 
+  z-index:8888;
 } 
  
 #page2.show { 
@@ -223,7 +229,7 @@ main {
   background:#000;
   pointer-events:none;
   z-index:99999;
-  transition: transform 0.5s, opacity 0.3s;
+  transition: transform 0.2s ease, opacity 0.3s;
 
 }
 
@@ -241,4 +247,39 @@ main {
   pointer-events:none;
 }
 
+/* TOGGLE DARK MODE SWITCH */
+
+input[type="checkbox"]{
+  --webkit-appearance: none;
+  --moz-appearance: none;
+  appearance: none;
+  position: relative;
+  height:30px;
+  width:60px;
+  background-color:rgba(184, 178, 178, 0.9);
+  border-radius:5rem;
+  transition: background-color .2s;
+  box-shadow: 0 0 15px #0000001e;
+} 
+
+input[type="checkbox"]::after{
+  content:'';
+  position:absolute;
+  top:50%;
+  left:30%;
+  transform: translate(-50%, -50%);
+  height:20px;
+  width:20px;
+  border-radius:5rem;
+  background-color:rgba(0, 0, 0, 0.8);
+  transition: left .2s;
+}
+
+input[type="checkbox"]:checked{
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+input[type="checkbox"]:checked::after{
+  left:70%;
+}
 
