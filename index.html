@@ -3,7 +3,7 @@
 <head> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta author="Nicolas Cuffia - info@nicolascuffia.com" > 
+    <meta name="Nicolas Cuffia - info@nicolascuffia.com" > 
     <link rel="stylesheet" href="style.css"> 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300" rel="stylesheet"> 
     <script src="script.js"></script> 
@@ -21,16 +21,26 @@
     <a href="#" onclick="nextPage()">LOREM EPSUM</a> 
  </div> 
   <header> 
+
+
         <div id="header-left">   
-           <dib id="nav-btn" onclick="openMenu()">  
+           <div id="nav-btn" onclick="openMenu()">  
                <div class="btn-line"></div> 
                <div class="btn-line"></div> 
                <div class="btn-line"></div> 
            </div> 
         </div> 
-        <div id="header-right">  
-        </div> 
+
+
+              <div id="header-right">  
+               <input type="checkbox" id="toggle-dark-mode">
+              </div> 
+
+
   </header> 
+
+
+
   <!-- Main --> 
   <main> 
    <div id="main-left"> 
@@ -39,17 +49,75 @@
          <span>Rodrigue</span></p> 
        </div> 
        <div id="box-language-links"> 
-          <a href="#">COMPOSITEUR</a> 
-          <a href="#">COMPOSER</a> 
+          <a class="liens" href="#">COMPOSITEUR</a> 
+          <a class="liens" href="#">COMPOSER</a> 
        </div> 
    </div> 
+
    <div id="main-right"></div> 
   </main> 
   <!-- Page 2 --> 
 <div id="page2" style="display: flex; justify-content: center;"><h1 style="color: black; text-align: center;">Page 2</h1></div> 
   </div> 
+
+
   <!-- Curseur -->
   <div class="custom-cursor"></div>
   <div class="custom-cursor-before"></div>
+
+
+
+
+
+  
+<!-- SCRIPT  TOGGLE DARK MODE SWITCH-->
+
+
+  <script>
+    var checkbox = document.getElementById("toggle-dark-mode");
+    var div = document.querySelector("body");
+    var links = document.querySelectorAll("a");
+    var customCursor = document.querySelector(".custom-cursor");
+    var customCursorBefore = document.querySelector(".custom-cursor-before");
+    var btnLine = document.querySelectorAll(".btn-line");
+    var monMenu = document.getElementById('menu');
+    var btnClose = document.querySelector('.close-icon');
+    
+
+    checkbox.addEventListener("click", function() {
+      if (checkbox.checked) {
+        div.style.backgroundColor = "black";
+        div.style.color = "white";
+        customCursor.style.background = "white";
+        customCursorBefore.style.background = "rgba(255,255,255,0.5)";
+        monMenu.style.backgroundColor = 'black';
+        btnClose.style.color = 'white';
+
+        links.forEach(function(link) {
+          link.style.color = "white";
+        });
+        btnLine.forEach(function(line){
+          line.style.background="white";
+        })
+      } else {
+        div.style.backgroundColor = "white";
+        div.style.color = "black";
+        links.forEach(function(link) {
+          link.style.color = "black";
+          btnLine.forEach(function(line){
+          line.style.background="black";
+          customCursor.style.background = "black";
+          customCursorBefore.style.background = "rgba(0,0,0,0.2)";
+          monMenu.style.background = "white";
+          btnClose.style.color = 'black';
+
+
+        })
+        });
+      }
+    });
+       </script>
+
+
 </body> 
 </html>
